@@ -533,10 +533,10 @@ public class TouchParser {
             mListener.onPointerMotion((int) e.getX(), (int) e.getY());
 
             currentBS = e.getButtonState();
-            if (e.getSource() == 12290 && ((e.getAction() == 0 && ev.getPointerCount() <= 1) || (e.getAction() == 2 && ev.getPointerCount() <= 1))) {
+            if (e.getSource() == 12290 && ((e.getAction() == 0 && e.getPointerCount() <= 1) || (e.getAction() == 2 && e.getPointerCount() <= 1))) {
                 currentBS = 1;
             }
-            if (e.getSource() == 12290 && (e.getAction() == 0 && ev.getPointerCount() > 1)) {
+            if (e.getSource() == 12290 && (e.getAction() == 0 && e.getPointerCount() > 1)) {
                 currentBS = 2;
             }
             if (isMouseButtonChanged(MotionEvent.BUTTON_PRIMARY)) {
