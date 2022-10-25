@@ -124,6 +124,7 @@ public class TouchParser {
         @Override
         public void handleMessage(Message msg) {
             switch (msg.what) {
+                Toast.makeText(TouchParser.this, msg.what + "", Toast.LENGHT_SHORT).show();
                 case SHOW_PRESS:
                     break;
 
