@@ -124,7 +124,6 @@ public class TouchParser {
 
         @Override
         public void handleMessage(Message msg) {
-            Toast.makeText(target.getRootView().findViewById(android.R.id.content).getContext(), msg.what + "", Toast.LENGTH_SHORT).show();
             switch (msg.what) {
                 case SHOW_PRESS:
                     break;
@@ -238,6 +237,7 @@ public class TouchParser {
         }
 
         final int action = ev.getAction();
+        Toast.makeText(target.getRootView().findViewById(android.R.id.content).getContext(), action + "", Toast.LENGTH_LONG).show();
         final boolean pointerUp =
                 (action & MotionEvent.ACTION_MASK) == MotionEvent.ACTION_POINTER_UP;
         final int skipIndex = pointerUp ? ev.getActionIndex() : -1;
