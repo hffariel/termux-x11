@@ -206,7 +206,7 @@ public class TouchParser {
     }
 
     boolean onTouchEvent(MotionEvent ev) {
-        Toast.makeText(target.getRootView().findViewById(android.R.id.content).getContext(), "source: "+ev.getSource()+ " action: "+ev.getAction(), Toast.LENGTH_SHORT).show();
+        Toast.makeText(target.getRootView().findViewById(android.R.id.content).getContext(), "source: "+ev.getSource()+ " mask: "+ev.getActionMasked()+ " action: "+ev.getAction()+ " buttonstate: "+ev.getButtonState(), Toast.LENGTH_SHORT).show();
         if ((ev.getSource() & InputDevice.SOURCE_MOUSE) == InputDevice.SOURCE_MOUSE || ev.getSource() == 12290) {
             return hmListener.onTouch(ev);
         }
