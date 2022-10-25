@@ -124,7 +124,7 @@ public class TouchParser {
 
         @Override
         public void handleMessage(Message msg) {
-            Toast.makeText(TouchParser.this, msg.what + "", Toast.LENGTH_SHORT).show();
+            Toast.makeText(target.getRootView().findViewById(android.R.id.content).getContext(), msg.what + "", Toast.LENGTH_SHORT).show();
             switch (msg.what) {
                 case SHOW_PRESS:
                     break;
