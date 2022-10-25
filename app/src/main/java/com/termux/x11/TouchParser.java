@@ -26,6 +26,7 @@ import android.view.InputDevice;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewConfiguration;
+import android.widget.Toast;
 
 @SuppressWarnings("unused")
 public class TouchParser {
@@ -123,8 +124,8 @@ public class TouchParser {
 
         @Override
         public void handleMessage(Message msg) {
+            Toast.makeText(TouchParser.this, msg.what + "", Toast.LENGHT_SHORT).show();
             switch (msg.what) {
-                Toast.makeText(TouchParser.this, msg.what + "", Toast.LENGHT_SHORT).show();
                 case SHOW_PRESS:
                     break;
 
