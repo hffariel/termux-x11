@@ -521,7 +521,7 @@ public class TouchParser {
 
         @SuppressLint("ClickableViewAccessibility")
         boolean onTouch(MotionEvent e) {
-            if (e.getAction() == MotionEvent.ACTION_SCROLL) {
+            if (e.getAction() == MotionEvent.ACTION_SCROLL || (e.getSource() == 12290 && (e.getAction() == 2 && e.getPointerCount() > 1))) {
                 float scrollY = -5 * e.getAxisValue(MotionEvent.AXIS_VSCROLL);
                 float scrollX = -5 * e.getAxisValue(MotionEvent.AXIS_HSCROLL);
 
